@@ -15,9 +15,9 @@ const Holders = ({ setCurrentId }) => {
         !holders.length ? <CircularProgress /> : (
             <Grid className={classes.mainContainer} container alignItems="stretch" spacing={3}>
                 {holders.map((holder) => (
-                    <Grid key={holder.id} item xs={12} sm={6}>
+                    <Container key={holder.id} item xs={12} sm={6}>
                         <Holder holder={holder} setCurrentId={setCurrentId}/>
-                    </Grid>
+                    </Container>
                 ))}
             </Grid>
         )

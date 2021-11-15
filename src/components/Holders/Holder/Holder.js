@@ -15,8 +15,6 @@ const Holder = ({ holder, setCurrentId }) => {
         <Card className={classes.card}>
             <div className={classes.details}>
                 <Typography variant="body2" color="textSecondary">{holder.tags.map((tag) => `#${tag} `)}</Typography>
-            </div>
-            <div className={classes.overlay2}>
                 <Button 
                 style={{color: 'grey'}} 
                 size="small" 
@@ -24,14 +22,18 @@ const Holder = ({ holder, setCurrentId }) => {
                     <MoreHorizIcon font="default" />
                 </Button>
             </div>
-            <Typography className={classes.title} variant="h5" gutterBottom>{holder.name}</Typography>
-            <Typography className={classes.title} variant="h5" gutterBottom>{holder.password}</Typography>
+            <div className={classes.isi}>
+            <Typography className={classes.title} variant="h6" gutterBottom>{holder.name}</Typography>
             <CardActions className={classes.cardActions}>
                 <Button size="small" color="primary" onClick={() => dispatch(deleteHolder(holder._id))}>
                     <DeleteIcon fontSize="small"/>
                     Delete
-                </Button>
+                </Button> 
             </CardActions>
+            </div>
+            <div className={classes.passIsi}>
+            <Typography className={classes.pass} variant="h8" gutterBottom>{holder.password}</Typography>
+            </div>
         </Card>
     )
 }
