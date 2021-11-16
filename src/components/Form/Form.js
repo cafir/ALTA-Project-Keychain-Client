@@ -14,6 +14,7 @@ const Form = ( {currentId, setCurrentId}) => {
     });
     const holder = useSelector((state) => currentId ? state.holders.find((h) => h._id === currentId) : null);
     const dispatch = useDispatch();
+    const user = JSON.parse(localStorage.getItem('profile'))
 
     useEffect(() => {
         if (holder) {
@@ -27,14 +28,22 @@ const Form = ( {currentId, setCurrentId}) => {
         e.preventDefault();
 
         if (currentId) {
-            dispatch(updateHolder(currentId, holderData));
+            dispatch(updateHolder(currentId, { ...holderData, userName: user?.result?.name  }))
+            clear()
         } else {
-            dispatch(createHolder(holderData))
+            dispatch(createHolder({ ...holderData, userName: user?.result?.name  }))
+            clear()
         }
 
-        dispatch(createHolder(holderData))
+        
+    }
 
-        clear()
+    if (!user?.result?.name) {
+        return (
+            <Paper className={classes.paper}>
+                <Typography variant="h6" align="center">Please sign In</Typography>
+            </Paper>
+        )
     }
 
     const clear = () => {
