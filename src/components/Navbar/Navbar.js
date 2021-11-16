@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AppBar, Avatar, Button, Toolbar, Typography } from "@material-ui/core";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import useStyles from './styles'
-import keyChainLogo from '../../images/logoKeychain.png'
+import keyChainLogo from '../../images/KeyChainPutih.png'
 
 import { useDispatch } from "react-redux";
 
@@ -29,10 +29,10 @@ const Navbar = () => {
     }, [location])
     
 
-    return (
+    return ( 
         <AppBar className={classes.appBar} position="static" color="inherit">
-            <div className={classes.brandContainer}>
-                <img className={classes.image} src={keyChainLogo} alt="icon" height="60"/>
+            <div className={classes.brandContainer}> 
+                <img className={classes.imageNavbar} src={keyChainLogo} alt="icon"/>
             </div>
             <Toolbar className={classes.toolbar}>
                 {user ? (
@@ -42,7 +42,7 @@ const Navbar = () => {
                         <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
                     </div>
                 ) : (
-                    <Button component={Link} to="/auth" variant="outlined" className={classes.log}>Login</Button>
+                    <Button component={Link} to="/auth" className={classes.log}>Login</Button>
                 )}
             </Toolbar>
         </AppBar>

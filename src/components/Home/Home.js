@@ -22,7 +22,7 @@ const Home = () => {
     }, [dispatch])
 
     return (
-        <Grow in>
+        <Grow in> 
             <Container align="center">
                 <Grid 
                     container

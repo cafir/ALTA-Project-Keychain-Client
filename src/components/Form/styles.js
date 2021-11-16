@@ -18,10 +18,6 @@ export default makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
-  fileInput: {
-    width: '97%',
-    margin: '10px 0',
-  },
   txt: {
     borderRadius: "10px",
     boxShadow: "2px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -32,7 +28,7 @@ export default makeStyles((theme) => ({
     marginTop: "20px",
     width: "95%",
     backgroundColor: "#3838FD",
-    borderRadius: "10px",
+    borderRadius: "20px",
     boxShadow: "0px 0px 5px rgba(56, 56, 253, 1)",
     fontSize: "16px",
     color: "#ffffff",
