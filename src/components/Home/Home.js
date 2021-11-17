@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grow, Grid} from "@material-ui/core"
+import { Container, Grow, Grid, Box} from "@material-ui/core"
 
 import Form from "../Form/Form";
 import Holders from "../Holders/Holders";
@@ -23,6 +23,9 @@ const Home = () => {
 
     return (
         <Grow in> 
+        <div>
+            <Box className={classes.div}>
+            </Box>
             <Container align="center">
                 <Grid 
                     container
@@ -34,6 +37,7 @@ const Home = () => {
                         <Holders setCurrentId={setCurrentId}/>
                 </Grid>
             </Container>
+        </div>
         </Grow>
     )
     

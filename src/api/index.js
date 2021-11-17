@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-// const url = 'http://localhost:5000/holders';
+// const url = '/holders';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' })
+
+const API = axios.create({ baseURL: 'https://keychain-backend.herokuapp.com' })
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem('profile')) {

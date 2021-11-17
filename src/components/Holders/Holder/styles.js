@@ -18,8 +18,6 @@ export default makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-between',
     borderRadius: '15px',
-    height: '100%',
-    position: 'relative',
     marginBottom: "10px",
     boxShadow: "2px 4px 4px rgba(0, 0, 0, 0.25)",
     backgroundColor: "#FFFFFF",
@@ -49,6 +47,9 @@ export default makeStyles({
     margin: "0 0 0 20px",
     textAlign: "left",
   },
+  title: {
+    cursor: "pointer",
+  },
   cardActions: {
     padding: '0 16px 8px 16px',
     display: 'flex',
@@ -65,11 +66,10 @@ export default makeStyles({
   passIsi: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     alignItems: "center",
     margin: "0 0 0 20px",
     textAlign: "left",
-    color: "#747474",
-    fontStyle: "italic"
+    color: "#000000",
   }
 });

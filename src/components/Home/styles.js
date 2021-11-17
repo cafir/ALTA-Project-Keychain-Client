@@ -12,5 +12,9 @@ export default makeStyles(() => ({
     //   heading: {
     //     color: 'rgba(0,183,255, 1)',
     //   },
-    
+    // div: {
+    //     backgroundColor: "#0000ff",
+    //     position: "relative",
+    //     height: "fit-content",
+    // }
 }))
