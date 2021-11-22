@@ -16,9 +16,12 @@ const Home = () => {
     const [currentId, setCurrentId] = useState(null);
     const classes = useStyles();
     const dispatch = useDispatch();
+    const user = JSON.parse(localStorage.getItem('profile'))
+    console.log(user?.result?._id || user?.result?.googleId)
+    console.log(user)
 
     useEffect(() => {
-        dispatch(getHolders());
+        dispatch(getHolders(user?.result?._id || user?.result?.googleId));
     }, [dispatch])
 
     return (

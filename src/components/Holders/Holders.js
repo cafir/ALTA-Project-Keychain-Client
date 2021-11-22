@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, CircularProgress, Grid} from "@material-ui/core";
 import { useSelector } from "react-redux";
 
@@ -8,8 +8,15 @@ import useStyles from './styles'
 const Holders = ({ setCurrentId }) => {
     const holders = useSelector((state) => state.holders)
     const classes = useStyles();
+    
 
-    console.log(holders)
+    console.log(setCurrentId)
+
+    if (holders.length === 0) {
+        return (
+            <h1>No Post</h1>
+        )
+    }
 
     return (
         !holders.length ? <CircularProgress /> : (

@@ -11,6 +11,9 @@ import { deleteHolder } from "../../../actions/holders";
 const Holder = ({ holder, setCurrentId }) => {
     const classes = useStyles();
     const dispatch = useDispatch()
+
+    
+    
     return (
         <Card className={classes.card}>
             <div className={classes.details}>

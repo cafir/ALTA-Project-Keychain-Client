@@ -47,6 +47,19 @@ const Form = ({ currentId, setCurrentId }) => {
 
   if (user?.result?.name) {
     return (
+// <<<<<<< HEAD
+//         <Paper className={classes.paper}>
+//             <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
+//                 <Typography variant="h6">{currentId ? 'Editing' : 'Creating'} Password Holder</Typography>
+//                 <TextField className={classes.txt} name="name" variant="outlined" label="Username/Email"  value={holderData.name} onChange={(e) => setHolderData({ ...holderData, name: e.target.value })}/>
+//                 <TextField className={classes.txt} name="password" variant="outlined" label="Password"  value={holderData.password} onChange={(e) => setHolderData({ ...holderData, password: e.target.value })}/>
+//                 <TextField className={classes.txt} name="tags" variant="outlined" label="Tags"  value={holderData.tags} onChange={(e) => setHolderData({ ...holderData, tags: e.target.value.split(',') })}/>
+//                 <Button className={classes.buttonSubmit} size="large" type="submit" >Submit</Button>
+//             </form>
+//         </Paper>
+//     )
+// }
+// =======
       <Paper className={classes.paper}>
         <form
           autoComplete="off"
@@ -97,5 +110,6 @@ const Form = ({ currentId, setCurrentId }) => {
     return <div />;
   }
 };
+// >>>>>>> master
 
 export default Form;

@@ -1,8 +1,8 @@
 import * as api from "../api"
 
-export const getHolders = () => async (dispatch) => {
+export const getHolders = (id) => async (dispatch) => {
     try {
-        const { data } = await api.fetchHolders()
+        const { data } = await api.fetchHolders(id)
 
         dispatch({ type: 'FETCH_ALL', payload: data });
     } catch (error) {
