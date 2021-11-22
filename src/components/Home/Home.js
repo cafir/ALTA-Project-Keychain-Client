@@ -23,11 +23,8 @@ const Home = () => {
 
     return (
         <Grow in> 
-        <div>
-            <Box className={classes.div}>
-            </Box>
             <Container align="center">
-                <Grid 
+                <Grid  
                     container
                     direction="column"
                     justifyContent="center"
@@ -37,7 +34,6 @@ const Home = () => {
                         <Holders setCurrentId={setCurrentId}/>
                 </Grid>
             </Container>
-        </div>
         </Grow>
     )
     

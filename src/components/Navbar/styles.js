@@ -15,7 +15,7 @@ export default makeStyles((theme) => ({
     textDecoration: 'none',
   },
   imageNavbar: {
-    width: "70%",
+    width: "50%",
     height: "auto",
   },
   toolbar: {
