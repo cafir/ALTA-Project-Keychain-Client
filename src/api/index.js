@@ -3,8 +3,8 @@ import axios from "axios";
 // const url = 'http://localhost:5000/holders';
 
 const API = axios.create({
-  // baseURL: "https://keychain-backend.herokuapp.com/",
-  baseURL: "http://localhost:5000",
+  baseURL: "https://keychain-backend.herokuapp.com/",
+  // baseURL: "http://localhost:5000",
 });
 
 API.interceptors.request.use((req) => {
@@ -17,7 +17,8 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const fetchHolders = (id) => API.get(`/holders/${id}`);
+export const fetchHolders = (id, page) => API.get(`/holders/${id}/?page=${page}`);
+export const fetchHoldersBySearch = (id, searchQuery) => API.get(`/holders/${id}/search?searchQuery=${searchQuery.search || 'none'}&tags=${searchQuery.tags}`)
 export const createHolder = (newHolder) => API.post("/holders", newHolder);
 export const updateHolder = (id, updatedHolder) =>
   API.patch(`/holders/${id}`, updatedHolder);
