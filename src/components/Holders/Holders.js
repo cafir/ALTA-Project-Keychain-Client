@@ -6,20 +6,20 @@ import Holder from "./Holder/Holder";
 import useStyles from './styles'
 
 const Holders = ({ setCurrentId }) => {
-    const holders = useSelector((state) => state.holders)
+    const {holders} = useSelector((state) => state.holders)
     const classes = useStyles();
     
 
     console.log(setCurrentId)
 
-    if (holders.length === 0) {
-        return (
-            <h1>No Post</h1>
-        )
-    }
+    // if (holders.length === 0) {
+    //     return (
+    //         <h1>No Post</h1>
+    //     )
+    // }
 
     return (
-        !holders.length ? <CircularProgress /> : (
+        !holders?.length ? <CircularProgress /> : (
             <Grid className={classes.mainContainer} container alignItems="stretch" spacing={3}>
                 {holders.map((holder) => (
                     <Container key={holder.id} item xs={12} sm={6}>

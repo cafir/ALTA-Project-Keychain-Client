@@ -28,18 +28,7 @@ const Navbar = () => {
     setUser(null);
   };
 
-// <<<<<<< HEAD
-//     useEffect(() => {
 
-//         setUser(JSON.parse(localStorage.getItem('profile')))
-//     }, [location])
-    
-
-//     return ( 
-//         <AppBar className={classes.appBar} position="static" color="inherit">
-//             <div className={classes.brandContainer}> 
-//                 <img className={classes.imageNavbar} src={keyChainLogo} alt="icon"/>
-// =======
   useEffect(() => {
     const token = user?.token;
 
@@ -73,7 +62,6 @@ const Navbar = () => {
               >
                 Logout
               </Button>
-{/* >>>>>>> master */}
             </div>
           ) : (
             <Button component={Link} to="/auth" className={classes.log}>

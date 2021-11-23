@@ -1,10 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles(() => ({
-  con: {
-    backgroundColor: "#FFFFFF",
-    paddingBottom: "30px",
-  },  
+  // con: {
+  //   backgroundColor: "#FFFFFF",
+  //   paddingBottom: "30px",
+  // },  
   box: {
       backgroundColor: "#3838FD",
       position: "relative",
