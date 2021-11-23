@@ -8,10 +8,12 @@ import { useDispatch } from "react-redux";
 
 import { deleteHolder } from "../../../actions/holders";
 
+import { bytes } from "../../encryptionHandler";
+
 const Holder = ({ holder, setCurrentId }) => {
     const classes = useStyles();
     const dispatch = useDispatch()
-
+    const decrypt = bytes(holder.password)
     
     
     return (
@@ -35,7 +37,7 @@ const Holder = ({ holder, setCurrentId }) => {
             </CardActions>
             </div>
             <div className={classes.passIsi}>
-            <Typography className={classes.pass} variant="h8" gutterBottom>{holder.password}</Typography>
+            <Typography className={classes.pass} variant="h8" gutterBottom>{decrypt}</Typography>
             </div>
         </Card>
     )

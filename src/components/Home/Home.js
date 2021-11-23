@@ -32,13 +32,6 @@ const Home = () => {
     const [search, setSearch] = useState('')
     const [tags, setTags] = useState([])
 
-    console.log(user?.result?._id || user?.result?.googleId)
-    console.log(user)
-
-    // useEffect(() => {
-    //     dispatch(getHolders(user?.result?._id || user?.result?.googleId));
-    // }, [dispatch])
-
     const searchHolder = () => {
         if (search.trim() || tags) {
             dispatch(getHoldersBySearch( user?.result?._id || user?.result?.googleId, { search, tags: tags.join(',') }))

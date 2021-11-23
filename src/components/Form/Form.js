@@ -5,6 +5,8 @@ import useStyles from "./styles";
 
 import { useDispatch, useSelector } from "react-redux";
 import { createHolder, updateHolder } from "../../actions/holders";
+import { useNavigate } from "react-router-dom";
+import { cipherText } from '../encryptionHandler'
 
 const Form = ({ currentId, setCurrentId }) => {
   const [holderData, setHolderData] = useState({
@@ -13,7 +15,7 @@ const Form = ({ currentId, setCurrentId }) => {
     tags: "",
   });
   const holder = useSelector((state) =>
-    currentId ? state.holders.find((h) => h._id === currentId) : null
+    currentId ? state.holders.holders.find((h) => h._id === currentId) : null
   );
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("profile"));
@@ -30,12 +32,10 @@ const Form = ({ currentId, setCurrentId }) => {
     e.preventDefault();
 
     if (currentId) {
-      dispatch(
-        updateHolder(currentId, { ...holderData, userName: user?.result?.name })
-      );
+      dispatch(updateHolder(currentId, { ...holderData, userName: user?.result?.name}));
       clear();
     } else {
-      dispatch(createHolder({ ...holderData, userName: user?.result?.name }));
+      dispatch(createHolder({ ...holderData, userName: user?.result?.name}));
       clear();
     }
   };
