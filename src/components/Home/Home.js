@@ -4,6 +4,8 @@ import { Container, Grow, Grid, Box} from "@material-ui/core"
 import Form from "../Form/Form";
 import Holders from "../Holders/Holders";
 import Navbar from "../Navbar/Navbar";
+import AboutUs from "../AboutUs/AboutUs";
+import ContactUs from "../ContactUs/ContactUs";
 
 //redux
 import { useDispatch } from "react-redux";
@@ -23,7 +25,7 @@ const Home = () => {
 
     return (
         <Grow in> 
-            <Container align="center">
+            <Container className={classes.con}>
                 <Grid  
                     container
                     direction="column"
@@ -33,6 +35,8 @@ const Home = () => {
                         <Form currentId={currentId} setCurrentId={setCurrentId}/>
                         <Holders setCurrentId={setCurrentId}/>
                 </Grid>
+                <AboutUs/>
+                <ContactUs/>
             </Container>
         </Grow>
     )

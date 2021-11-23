@@ -15,7 +15,7 @@ export default makeStyles((theme) => ({
     textDecoration: 'none',
   },
   imageNavbar: {
-    width: "50%",
+    width: "60%",
     height: "auto",
   },
   toolbar: {
@@ -28,25 +28,59 @@ export default makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: "center",
-    padding: 0,
+    padding: 5,
+  },
+  logoModal: {
+    width: "120px",
+    height: "auto",
+    marginBottom: theme.spacing(2)
+  },
+  styleModal: {
+    position: "absolute",
+    top: "120px",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "#ffffff",
+    borderRadius: "10px",
+    padding: "10px 20px 10px 20px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  subStyleModal: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  subSubStyleModal: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginRight: theme.spacing(8),
   },
   userName: {
+    fontFamily: "Poppins",
+    fontWeight: 600,
     display: 'flex',
     alignItems: 'center',
-    fontSize: "14px",
-    color: "#ffffff"
+    color: "#000000",
+    marginLeft: 5,
   },
   brandContainer: {
     display: 'flex',
     alignItems: 'flex-start',
   },
   log: {
+    fontFamily: "Poppins",
+    fontWeight: 600,
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
     fontSize: "16px",
     color: "#c4c4c4",
-    fontWeight: "bold",
     textTransform: "capitalize",
       "&:hover": {
         backgroundColor: "#3838FD",
@@ -54,22 +88,24 @@ export default makeStyles((theme) => ({
       }
   },
   logout: {
+    fontFamily: "Poppins",
+    fontWeight: 600,
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
     fontSize: "16px",
-    color: "#c4c4c4",
-    fontWeight: "bold",
+    color: "#3838FD",
     textTransform: "capitalize",
       "&:hover": {
-        backgroundColor: "#3838FD",
-        color: "#ffffff",
+        backgroundColor: "#ffffff",
+        color: "#0000ff",
       }
   },
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    cursor: "pointer",
   },
 }));
