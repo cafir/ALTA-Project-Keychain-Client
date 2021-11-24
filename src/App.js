@@ -17,10 +17,10 @@ const App = () => {
         <BrowserRouter>
             <Container maxWidth="sm" className={classes.con}>
                 <Routes>
-                    <Route path='http://cafir.github.io/ALTA-Project-Keychain-Client/' exact element={ <Navigate to='http://cafir.github.io/ALTA-Project-Keychain-Client/holders' />}/>
-                    <Route path='http://cafir.github.io/ALTA-Project-Keychain-Client/holders' exact element={ <Home/>}/>
-                    <Route path='http://cafir.github.io/ALTA-Project-Keychain-Client/holders/search' exact element={<Home/>}/>
-                    <Route path='http://cafir.github.io/ALTA-Project-Keychain-Client/auth' exact element={<Auth/> }/>
+                    <Route path='ALTA-Project-Keychain-Client/' exact element={ <Navigate to='ALTA-Project-Keychain-Client/holders' />}/>
+                    <Route path='ALTA-Project-Keychain-Client/holders' exact element={ <Home/>}/>
+                    <Route path='ALTA-Project-Keychain-Client/holders/search' exact element={<Home/>}/>
+                    <Route path='ALTA-Project-Keychain-Client/auth' exact element={<Auth/> }/>
                 </Routes>
             </Container>
         </BrowserRouter>
