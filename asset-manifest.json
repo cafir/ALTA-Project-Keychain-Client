@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/ALTA-Project-Keychain-Client/static/css/main.0c83806c.chunk.css",
+    "main.js": "/ALTA-Project-Keychain-Client/static/js/main.46b65c10.chunk.js",
+    "main.js.map": "/ALTA-Project-Keychain-Client/static/js/main.46b65c10.chunk.js.map",
+    "runtime-main.js": "/ALTA-Project-Keychain-Client/static/js/runtime-main.091ccc4a.js",
+    "runtime-main.js.map": "/ALTA-Project-Keychain-Client/static/js/runtime-main.091ccc4a.js.map",
+    "static/js/2.ae472581.chunk.js": "/ALTA-Project-Keychain-Client/static/js/2.ae472581.chunk.js",
+    "static/js/2.ae472581.chunk.js.map": "/ALTA-Project-Keychain-Client/static/js/2.ae472581.chunk.js.map",
+    "index.html": "/ALTA-Project-Keychain-Client/index.html",
+    "static/css/main.0c83806c.chunk.css.map": "/ALTA-Project-Keychain-Client/static/css/main.0c83806c.chunk.css.map",
+    "static/js/2.ae472581.chunk.js.LICENSE.txt": "/ALTA-Project-Keychain-Client/static/js/2.ae472581.chunk.js.LICENSE.txt",
+    "static/media/KeyChainWarna.32d38f62.png": "/ALTA-Project-Keychain-Client/static/media/KeyChainWarna.32d38f62.png",
+    "static/media/instagram.75e0546a.png": "/ALTA-Project-Keychain-Client/static/media/instagram.75e0546a.png",
+    "static/media/lazu.163ea466.jpeg": "/ALTA-Project-Keychain-Client/static/media/lazu.163ea466.jpeg",
+    "static/media/logoKeychain.d43d5cc2.png": "/ALTA-Project-Keychain-Client/static/media/logoKeychain.d43d5cc2.png",
+    "static/media/logos.d4afc7d9.png": "/ALTA-Project-Keychain-Client/static/media/logos.d4afc7d9.png",
+    "static/media/reza.e9803fdf.jpg": "/ALTA-Project-Keychain-Client/static/media/reza.e9803fdf.jpg",
+    "static/media/zaki.3d0e19e5.jpg": "/ALTA-Project-Keychain-Client/static/media/zaki.3d0e19e5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.091ccc4a.js",
+    "static/js/2.ae472581.chunk.js",
+    "static/css/main.0c83806c.chunk.css",
+    "static/js/main.46b65c10.chunk.js"
+  ]
+}
