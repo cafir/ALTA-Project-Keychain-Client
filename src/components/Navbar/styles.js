@@ -1,18 +1,29 @@
-import { makeStyles } from '@material-ui/core/styles';
-import { deepPurple } from '@material-ui/core/colors';
+import { makeStyles } from "@material-ui/core/styles";
+import { deepPurple } from "@material-ui/core/colors";
 
 export default makeStyles((theme) => ({
   appBar: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     backgroundColor: "#3838FD",
-    boxShadow: "none",
+    borderBottomLeftRadius: "20px",
+    borderBottomRightRadius: "20px",
+  },
+  paper: {
+    padding: "10px",
+    marginTop: "20px",
+    marginBottom: "40px",
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
+    borderRadius: "20px",
+    position: "relative",
+    bottom: "30px",
+    width: "fit-content",
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
-    textDecoration: 'none',
+    color: "rgba(0,183,255, 1)",
+    textDecoration: "none",
   },
   imageNavbar: {
     width: "60%",
@@ -70,8 +81,8 @@ export default makeStyles((theme) => ({
     marginLeft: 5,
   },
   brandContainer: {
-    display: 'flex',
-    alignItems: 'flex-start',
+    display: "flex",
+    alignItems: "flex-start",
   },
   log: {
     fontFamily: "Poppins",
@@ -82,10 +93,10 @@ export default makeStyles((theme) => ({
     fontSize: "16px",
     color: "#c4c4c4",
     textTransform: "capitalize",
-      "&:hover": {
-        backgroundColor: "#3838FD",
-        color: "#ffffff",
-      }
+    "&:hover": {
+      backgroundColor: "#3838FD",
+      color: "#ffffff",
+    },
   },
   logout: {
     fontFamily: "Poppins",

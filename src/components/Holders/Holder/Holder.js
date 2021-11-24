@@ -8,12 +8,12 @@ import { useDispatch } from "react-redux";
 
 import { deleteHolder } from "../../../actions/holders";
 
+import { bytes } from "../../encryptionHandler";
+
 const Holder = ({ holder, setCurrentId }) => {
     const [open, setOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const classes = useStyles();
-    const dispatch = useDispatch();
-
     const handleClick = () => {
         setOpen(!open)
     }
@@ -21,6 +21,10 @@ const Holder = ({ holder, setCurrentId }) => {
     const handleClose = () => setOpenModal(false);
 
     const buttonDelete = () => dispatch(deleteHolder(holder._id));
+
+    const dispatch = useDispatch()
+    const decrypt = bytes(holder.password)
+    
     return (
         <Card className={classes.card}>
             <div className={classes.details}>
@@ -59,7 +63,7 @@ const Holder = ({ holder, setCurrentId }) => {
         <Collapse in={open} timeout="auto" unmountOnExit>
         <List>
             <div className={classes.passIsi}>
-            <Typography variant="h8" gutterBottom>{holder.password}</Typography>
+            <Typography className={classes.pass} variant="h8" gutterBottom>{decrypt}</Typography>
             </div>
         </List>
         </Collapse>

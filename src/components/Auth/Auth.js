@@ -84,6 +84,7 @@ const Auth = () => {
                             </Grid>
                         }
                         { isSignup ? <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password"/> : null}
+
                     </Grid>
                     <br/>
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.buttonSubmit}>{isSignup ? 'Sign Up' : 'Sign In'}</Button>

@@ -4,7 +4,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import useStyles from './styles'
 import keyChainLogo from '../../images/KeyChainPutih.png';
 import keyChainLogoWarna from "../../images/KeyChainWarna.png";
-
 import { useDispatch } from "react-redux";
 
 const Navbar = () => {
@@ -17,21 +16,20 @@ const Navbar = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false); 
 
-    const logout = () => {
-        dispatch({ type: 'LOGOUT' })
+  const logout = () => {
+    dispatch({ type: "LOGOUT" });
 
-        navigate('/')
+    navigate("/");
 
-        setUser(null)
-    }
+    setUser(null);
+  };
 
-    useEffect(() => {
-        const token = user?.token;
 
-        setUser(JSON.parse(localStorage.getItem('profile')))
+  useEffect(() => {
+    const token = user?.token;
 
-    }, [location])
-    
+    setUser(JSON.parse(localStorage.getItem("profile")));
+  }, [location]);
 
     return ( 
         <AppBar className={classes.appBar} position="static" color="inherit">
