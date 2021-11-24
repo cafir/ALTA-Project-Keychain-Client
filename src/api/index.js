@@ -1,11 +1,7 @@
 import axios from "axios";
 
-// const url = '/holders';
-
-
 const API = axios.create({
   baseURL: "https://keychain-backend.herokuapp.com/",
-  // baseURL: "http://localhost:5000",
 });
 
 API.interceptors.request.use((req) => {
