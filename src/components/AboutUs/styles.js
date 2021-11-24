@@ -37,7 +37,7 @@ export default makeStyles((theme) => ({
     width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: "10px"
+    paddingBottom: "10px",
   },
   arrow: {
     cursor: "pointer",

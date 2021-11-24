@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { Collapse, Typography } from "@material-ui/core";
+import React from "react";
+import { Typography, Link } from "@material-ui/core";
 import useStyles from "./styles";
 import Logo from "../../images/KeyChainWarna.png"
 import IG from "../../images/instagram.png"
@@ -16,10 +16,13 @@ const ContactUs = () => {
                     Follow KeyChain
                 </Typography>
                 <div className={classes.icon}>
-                    <img className={classes.icons} src={IG} href="https://www.instagram.com/keychain.project/" alt="ig"/>
-                    <img className={classes.icons} src={TW} href="https://twitter.com/keychainproject" alt="tw"/>
+                    <a href="https://www.instagram.com/keychain.project/" target="_blank" rel="noreferrer">
+                        <img className={classes.icons} src={IG} alt="ig"/>
+                    </a>
+                    <a href="https://twitter.com/keychainproject" target="_blank" rel = "noreferrer">
+                        <img className={classes.icons} src={TW} alt="tw"/>
+                    </a>
                 </div>
-
         </div>
     )
 }

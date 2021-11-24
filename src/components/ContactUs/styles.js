@@ -19,10 +19,7 @@ export default makeStyles((theme) => ({
     marginTop: theme.spacing(4)
   },
   icon: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "center",
-      alignItems: "center",
+    textAlign: "center",
       marginTop: theme.spacing(1),
   },
   icons: {
