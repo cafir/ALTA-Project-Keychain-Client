@@ -17,7 +17,7 @@ const App = () => {
         <BrowserRouter>
             <Container maxWidth="sm" className={classes.con}>
                 <Routes>
-                    <Route path='/' exact element={ <Navigate to='/holders' />}/>
+                    <Route path='http://cafir.github.io/ALTA-Project-Keychain-Client/' exact element={ <Navigate to='/holders' />}/>
                     <Route path='/holders' exact element={ <Home/>}/>
                     <Route path='/holders/search' exact element={<Home/>}/>
                     <Route path='/auth' exact element={<Auth/> }/>
