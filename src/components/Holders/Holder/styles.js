@@ -48,6 +48,8 @@ export default makeStyles({
     textAlign: "left",
   },
   title: {
+    fontFamily: "Poppins",
+    fontWeight: 400,
     cursor: "pointer",
   },
   cardActions: {
@@ -64,6 +66,8 @@ export default makeStyles({
     textAlign: "left",
   },
   passIsi: {
+    fontFamily: "Poppins",
+    fontWeight: 400,
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
@@ -118,5 +122,8 @@ export default makeStyles({
         backgroundColor: "#FD3838",
         boxShadow: "0px 0px 5px rgba(255, 0, 0, 1)"
       }
+  },
+  pass: {
+
   }
 });

@@ -82,6 +82,7 @@ const Home = () => {
                                 onKeyPress={handleKeyPress} 
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
+                                className={classes.txt}
                             />
                             <Chip 
                                 style={{ margin: '10px 0'}}
@@ -90,8 +91,9 @@ const Home = () => {
                                 onDelete={handleDelete}
                                 label='Search Tags'
                                 variant="outlined"
+                                className={classes.txt}
                             />
-                            <Button onClick={searchHolder} variant='contained' color='primary'>Search</Button>
+                            <Button className={classes.buttonSubmit} onClick={searchHolder} variant='contained' color='primary'>Search</Button>
                         </AppBar>
                         <Holders setCurrentId={setCurrentId}/>
                         <Paper className={classes.pagination} elevation={6}>

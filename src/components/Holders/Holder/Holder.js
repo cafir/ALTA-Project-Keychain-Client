@@ -63,7 +63,7 @@ const Holder = ({ holder, setCurrentId }) => {
         <Collapse in={open} timeout="auto" unmountOnExit>
         <List>
             <div className={classes.passIsi}>
-            <Typography className={classes.pass} variant="h8" gutterBottom>{decrypt}</Typography>
+                <Typography className={classes.pass} variant="h8" gutterBottom>{`Your Password : ${decrypt}`}</Typography>
             </div>
         </List>
         </Collapse>

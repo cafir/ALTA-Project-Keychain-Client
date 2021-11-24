@@ -9,20 +9,30 @@ export default makeStyles((theme) => ({
   paper: {
     padding: "10px",
     marginTop: "20px",
-    marginBottom: "40px",
+    marginBottom: "20px",
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
     borderRadius: "20px",
   },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   titleHolder: {
     fontFamily: "Poppins",
     fontWeight: 600,
     fontSize: "100%",
     marginBottom: theme.spacing(1),
+    cursor: "pointer",
+  },
+  rataTengah: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    flexWrap: 'wrap',
   },
   txt: {
     borderRadius: "10px",
