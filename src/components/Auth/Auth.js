@@ -79,7 +79,7 @@ const Auth = () => {
                         { isSignup ? null : 
                             <Grid container justify="flex-end">
                                 <Grid item>
-                                    <Button className={classes.forgotPass}>Forgot password?</Button>
+                                    
                                 </Grid>
                             </Grid>
                         }
