@@ -91,7 +91,7 @@ const Home = () => {
                                 label='Search Tags'
                                 variant="outlined"
                             />
-                            <Button onClick={searchHolder} variant='contained' color='primary'>Search</Button>
+                            <Button className={classes.buttonSubmit} onClick={searchHolder} variant='contained' color='primary'>Search</Button>
                         </AppBar>
                         <Holders setCurrentId={setCurrentId}/>
                         <Paper className={classes.pagination} elevation={6}>

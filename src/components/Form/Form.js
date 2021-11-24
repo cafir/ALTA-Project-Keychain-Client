@@ -6,7 +6,7 @@ import useStyles from "./styles";
 import { useDispatch, useSelector } from "react-redux";
 import { createHolder, updateHolder } from "../../actions/holders";
 import { useNavigate } from "react-router-dom";
-import { cipherText } from '../encryptionHandler'
+import { bytes } from '../encryptionHandler'
 
 const Form = ({ currentId, setCurrentId }) => {
   const [holderData, setHolderData] = useState({
@@ -74,7 +74,7 @@ const Form = ({ currentId, setCurrentId }) => {
             name="password"
             variant="outlined"
             label="Password"
-            value={holderData.password}
+            value={bytes(holderData.password)}
             onChange={(e) =>
               setHolderData({ ...holderData, password: e.target.value })
             }
