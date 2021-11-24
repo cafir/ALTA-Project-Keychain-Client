@@ -22,7 +22,8 @@ const Form = ({ currentId, setCurrentId }) => {
 
   useEffect(() => {
     if (holder) {
-      setHolderData(holder);
+      const temp = { ...holder, password: bytes(holder.password) }
+      setHolderData(temp);
     }
   }, [holder]);
 
@@ -38,6 +39,7 @@ const Form = ({ currentId, setCurrentId }) => {
       dispatch(createHolder({ ...holderData, userName: user?.result?.name}));
       clear();
     }
+    console.log(holderData)
   };
 
   const clear = () => {
