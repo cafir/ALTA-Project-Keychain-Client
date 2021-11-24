@@ -9,6 +9,8 @@ import { getHolders } from "../actions/holders";
 
 const Paginate = ({ page }) => {
     const { numberOfPages } = useSelector((state) => state.holders)
+    console.log(page)
+    console.log(useSelector((state) => state.holders))
     const classes = useStyles();
     const dispatch = useDispatch();
     const user = JSON.parse(localStorage.getItem('profile'))

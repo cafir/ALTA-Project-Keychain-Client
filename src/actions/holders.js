@@ -35,10 +35,6 @@ export const createHolder = (holder) => async (dispatch) => {
 
         dispatch({ type: 'CREATE', payload: data })
 
-        // dispatch({ type: 'END_LOADING' })
-        window.location.reload();
-        
-
     } catch (error) {
         console.log(error)
     }
@@ -58,9 +54,13 @@ export const updateHolder = (id, holder) => async (dispatch) => {
 export const deleteHolder = (id) => async (dispatch) => {
     try {
 
+        dispatch({ type: 'START_LOADING' })
+
         await api.deleteHolder(id)
 
         dispatch({ type: 'DELETE', payload: id})
+
+        dispatch({ type: 'END_LOADING' })
     } catch (error) {
         console.log(error);
     }

@@ -72,7 +72,7 @@ const Home = () => {
                     alignItems="center">
                         <Navbar/>
 
-                        <Form currentId={currentId} setCurrentId={setCurrentId}/>
+                        <Form currentId={currentId} setCurrentId={setCurrentId} page={page}/>
                         <AppBar className={classes.appBarSearch} position="static" color='inherit'>
                             <TextField 
                                 className={classes.txt}

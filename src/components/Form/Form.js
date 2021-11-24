@@ -5,11 +5,11 @@ import {ExpandMore} from "@material-ui/icons";
 import useStyles from "./styles";
 
 import { useDispatch, useSelector } from "react-redux";
-import { createHolder, updateHolder } from "../../actions/holders";
+import { createHolder, updateHolder, getHolders } from "../../actions/holders";
 import { useNavigate } from "react-router-dom";
 import { bytes } from '../encryptionHandler'
 
-const Form = ({ currentId, setCurrentId }) => {
+const Form = ({ currentId, setCurrentId, page }) => {
   const [holderData, setHolderData] = useState({
     name: "",
     password: "",
@@ -38,6 +38,7 @@ const Form = ({ currentId, setCurrentId }) => {
       clear();
     } else {
       dispatch(createHolder({ ...holderData, userName: user?.result?.name}));
+      dispatch(getHolders(user?.result?._id || user?.result?.googleId, page))
       clear();
     }
     console.log(holderData)
