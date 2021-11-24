@@ -124,6 +124,7 @@ export default makeStyles({
       }
   },
   pass: {
-
+    fontFamily: "Poppins",
+    fontWeight: 400,
   }
 });

@@ -75,16 +75,18 @@ const Home = () => {
                         <Form currentId={currentId} setCurrentId={setCurrentId}/>
                         <AppBar className={classes.appBarSearch} position="static" color='inherit'>
                             <TextField 
+                                className={classes.txt}
                                 name="search" 
                                 variant='outlined' 
-                                label='Search Passwords' 
+                                label='Search by Username or Email' 
                                 fullWidth
                                 onKeyPress={handleKeyPress} 
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
                                 className={classes.txt}
                             />
-                            <Chip 
+                            <Chip
+                                className={classes.txt} 
                                 style={{ margin: '10px 0'}}
                                 value={tags}
                                 onAdd={handleAdd}

@@ -7,7 +7,7 @@ import useStyles from "./styles";
 import { useDispatch, useSelector } from "react-redux";
 import { createHolder, updateHolder } from "../../actions/holders";
 import { useNavigate } from "react-router-dom";
-import { cipherText } from '../encryptionHandler'
+import { bytes } from '../encryptionHandler'
 
 const Form = ({ currentId, setCurrentId }) => {
   const [holderData, setHolderData] = useState({
@@ -23,7 +23,8 @@ const Form = ({ currentId, setCurrentId }) => {
 
   useEffect(() => {
     if (holder) {
-      setHolderData(holder);
+      const temp = { ...holder, password: bytes(holder.password) }
+      setHolderData(temp);
     }
   }, [holder]);
 
@@ -39,6 +40,7 @@ const Form = ({ currentId, setCurrentId }) => {
       dispatch(createHolder({ ...holderData, userName: user?.result?.name}));
       clear();
     }
+    console.log(holderData)
   };
 
   const clear = () => {

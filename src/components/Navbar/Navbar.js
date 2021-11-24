@@ -19,11 +19,14 @@ const Navbar = () => {
   const logout = () => {
     dispatch({ type: "LOGOUT" });
 
-    navigate("/");
+    navigate("/auth");
 
     setUser(null);
   };
 
+  const handleHome = () => {
+    navigate("/");
+  }
 
   useEffect(() => {
     const token = user?.token;
@@ -34,7 +37,7 @@ const Navbar = () => {
     return ( 
         <AppBar className={classes.appBar} position="static" color="inherit">
             <div className={classes.brandContainer}>
-                <img className={classes.imageNavbar} src={keyChainLogo} alt="icon"/>
+                <img onClick={handleHome} className={classes.imageNavbar} src={keyChainLogo} alt="icon"/>
             </div>
             <Toolbar className={classes.toolbar}>
                 {user ? ( 
