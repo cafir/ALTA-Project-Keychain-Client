@@ -74,7 +74,7 @@ const Form = ({ currentId, setCurrentId }) => {
             name="password"
             variant="outlined"
             label="Password"
-            value={bytes(holderData.password)}
+            value={holderData.password}
             onChange={(e) =>
               setHolderData({ ...holderData, password: e.target.value })
             }
