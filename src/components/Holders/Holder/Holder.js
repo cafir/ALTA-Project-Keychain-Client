@@ -23,6 +23,10 @@ const Holder = ({ holder, setCurrentId }) => {
 
     const dispatch = useDispatch()
     const decrypt = bytes(holder.password)
+    const handleDelete = () => {
+        dispatch(deleteHolder(holder._id))
+        handleClose()
+    }
     
     return (
         <Card className={classes.card}>
@@ -52,7 +56,7 @@ const Holder = ({ holder, setCurrentId }) => {
                             <Typography variant="h6">Are you sure want to delete?</Typography>
                             <Typography variant="body2" color="textSecondary">{holder.tags.map((tag) => `"${tag} ${holder.name}"`)}</Typography>
                             <div className={classes.btnYesNo}> 
-                                <Button className={classes.btnYes} onClick={() => dispatch(deleteHolder(holder._id))}>Yes</Button>
+                                <Button className={classes.btnYes} onClick={handleDelete}>Yes</Button>
                                 <Button className={classes.btnNo} onClick={handleClose}>No</Button>
                             </div>
                         </div>

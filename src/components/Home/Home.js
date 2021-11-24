@@ -83,6 +83,7 @@ const Home = () => {
                                 onKeyPress={handleKeyPress} 
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
+                                className={classes.txt}
                             />
                             <Chip
                                 className={classes.txt} 
@@ -92,6 +93,7 @@ const Home = () => {
                                 onDelete={handleDelete}
                                 label='Search Tags'
                                 variant="outlined"
+                                className={classes.txt}
                             />
                             <Button className={classes.buttonSubmit} onClick={searchHolder} variant='contained' color='primary'>Search</Button>
                         </AppBar>
