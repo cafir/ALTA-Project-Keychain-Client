@@ -14,13 +14,13 @@ const App = () => {
 
     console.log(user)
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={window.location.pathname || ''}>
             <Container maxWidth="sm" className={classes.con}>
                 <Routes>
-                    <Route path='ALTA-Project-Keychain-Client/' exact element={ <Navigate to='ALTA-Project-Keychain-Client/holders' />}/>
-                    <Route path='ALTA-Project-Keychain-Client/holders' exact element={ <Home/>}/>
-                    <Route path='ALTA-Project-Keychain-Client/holders/search' exact element={<Home/>}/>
-                    <Route path='ALTA-Project-Keychain-Client/auth' exact element={<Auth/> }/>
+                    <Route path='/' exact element={ <Navigate to='/holders' />}/>
+                    <Route path='/holders' exact element={ <Home/>}/>
+                    <Route path='/holders/search' exact element={<Home/>}/>
+                    <Route path='/auth' exact element={<Auth/> }/>
                 </Routes>
             </Container>
         </BrowserRouter>
