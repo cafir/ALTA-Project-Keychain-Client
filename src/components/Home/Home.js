@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
+
 import { Container, Grow, Grid, Paper, AppBar, TextField, Button} from "@material-ui/core"
 import { useNavigate, useLocation } from "react-router-dom";
 import Chip from 'material-ui-chip-input'
 
+
 import Form from "../Form/Form";
 import Holders from "../Holders/Holders";
 import Navbar from "../Navbar/Navbar";
+
+import AboutUs from "../AboutUs/AboutUs";
+import ContactUs from "../ContactUs/ContactUs";
+
+
 //redux
 import { useDispatch } from "react-redux";
 
@@ -57,9 +64,14 @@ const Home = () => {
 
     return (
         <Grow in> 
-            <Container align="center">
-                <Navbar/>
-                <Grid container direction="column" justifyContent="center" alignItems="center">
+            <Container className={classes.con}>
+                <Grid  
+                    container
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center">
+                        <Navbar/>
+
                         <Form currentId={currentId} setCurrentId={setCurrentId}/>
                         <AppBar className={classes.appBarSearch} position="static" color='inherit'>
                             <TextField 
@@ -86,6 +98,8 @@ const Home = () => {
                             <Pagination page={page}/>
                         </Paper>
                 </Grid>
+                <AboutUs/>
+                <ContactUs/>
             </Container>
         </Grow>
     )

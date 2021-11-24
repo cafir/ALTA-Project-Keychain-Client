@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Avatar, Button, Paper, Grid, Typography, Container, TextField } from "@material-ui/core"
-import LockOutLinedIcon from "@material-ui/icons/LockOutlined"
+import { Button, Grid, Typography, Container } from "@material-ui/core";
 import useStyles from './styles.js'
 import Input from "./Input.js";
 import Icon from './icon.js'
 import { signin, signup } from "../../actions/auth"
+import Logo from "../../images/logoKeychain.png"
 
 import { useDispatch } from "react-redux";
 
@@ -61,11 +61,9 @@ const Auth = () => {
     }
     return (
         <Container component="main" maxWidth="xs">
-            <Paper className={classes.paper} elevation={3}>
-                <Avatar className={classes.avatar}>
-                    <LockOutLinedIcon/>
-                </Avatar>
-                <Typography variant="h5">{isSignup ? 'Sign Up' : 'Sign In'}</Typography>
+            <div className={classes.paper} >
+                <img className={classes.logo} src={Logo} alt="logoKeyChain"/>
+                <Typography className={classes.titleKeyChain} variant="h5">{isSignup ? 'KeyChain' : 'KeyChain'}</Typography>
                 <form className={classes.form} onSubmit={handleSubmit}>
                     <Grid container spacing={2}>
                         {
@@ -78,33 +76,44 @@ const Auth = () => {
                         }
                         <Input name="email" label="Email Address" handleChange={handleChange} type="email"/>
                         <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? "text" : "password"} handleShowPassword={handleShowPassword}/>
-                        { 
-                            isSignup ? <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password"/> 
-                            : null
+                        { isSignup ? null : 
+                            <Grid container justify="flex-end">
+                                <Grid item>
+                                    <Button className={classes.forgotPass}>Forgot password?</Button>
+                                </Grid>
+                            </Grid>
                         }
+                        { isSignup ? <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password"/> : null}
+
                     </Grid>
-                    
-                    <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>{isSignup ? 'Sign Up' : 'Sign In'}</Button>
+                    <br/>
+                    <Button type="submit" fullWidth variant="contained" color="primary" className={classes.buttonSubmit}>{isSignup ? 'Sign Up' : 'Sign In'}</Button>
                     <GoogleLogin
                         clientId="215062051960-ojg4c343icabs53jfv4q8iqfb5mjc19o.apps.googleusercontent.com"
                         render={(renderProps) => (
-                            <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick}  disabled={renderProps.disabled} startIcon={<Icon/>} variant="contained">
-                                Google Sign In
+                            <Button className={classes.buttonSubmit} fullWidth onClick={renderProps.onClick}  disabled={renderProps.disabled} startIcon={<Icon/>} variant="contained">
+                                Sign In with Google
                             </Button>
                         )}
                         onSuccess={googleSuccess}
                         onFailure={googleFailure}
                         cookiePolicy="single_host_origin"
                     />
-                    <Grid container justify="flex-end">
-                        <Grid item>
-                            <Button onClick={switchMode}>
-                                { isSignup ? 'Already have an account? Sign In' : 'Dont have an account? Sign Up'}
-                            </Button>
-                        </Grid>
-                    </Grid>
+                    <div className={classes.switchSign}>
+                        { isSignup ?
+                            <div>
+                                <Typography className={classes.text}>Already have an account?</Typography>
+                                <Button fullWidth onClick={switchMode} className={classes.buttonSubmit2} variant="contained">Sign In</Button>
+                            </div>
+                            : 
+                            <div>
+                                <Typography className={classes.text}>Dont have an account?</Typography>
+                                <Button fullWidth onClick={switchMode} className={classes.buttonSubmit2} variant="contained">Sign Up</Button>
+                            </div>
+                        }
+                    </div>
                 </form>
-            </Paper>
+            </div>
         </Container>
     )
 }
