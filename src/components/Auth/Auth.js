@@ -79,7 +79,7 @@ const Auth = () => {
                         { isSignup ? null : 
                             <Grid container justify="flex-end">
                                 <Grid item>
-                                    
+                                    <Button className={classes.forgotPass}>Forgot password?</Button>
                                 </Grid>
                             </Grid>
                         }
@@ -89,7 +89,7 @@ const Auth = () => {
                     <br/>
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.buttonSubmit}>{isSignup ? 'Sign Up' : 'Sign In'}</Button>
                     <GoogleLogin
-                        clientId="215062051960-sabm1s18ld12g40g1u4d8qdcrl8odhdu.apps.googleusercontent.com"
+                        clientId="215062051960-ojg4c343icabs53jfv4q8iqfb5mjc19o.apps.googleusercontent.com"
                         render={(renderProps) => (
                             <Button className={classes.buttonSubmit} fullWidth onClick={renderProps.onClick}  disabled={renderProps.disabled} startIcon={<Icon/>} variant="contained">
                                 Sign In with Google
